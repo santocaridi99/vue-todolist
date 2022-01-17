@@ -31,6 +31,9 @@ new Vue({
                 done:false
             }
         },
+        check:function(index){
+           this.tasks[index].done=!this.tasks[index].done
+        }
 
     }
 

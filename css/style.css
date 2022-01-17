@@ -8,10 +8,12 @@ li{
     display: flex;
     justify-content: space-between;
 }
+li>span{
+    cursor: pointer;
+}
 .done{
     text-decoration: line-through;
 }
 .remove{
     padding-right: 20px;
-    cursor: pointer;
 }
