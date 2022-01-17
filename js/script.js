@@ -16,6 +16,7 @@ new Vue({
             }
         ],
         // creo un oggetto temporaneo con testo vuoto
+        // inizializzo done a false perchè mi aspetto che la nuova task inserita sia da completare
         temporaryTask:{
             text:'',
             done:false
