@@ -11,12 +11,22 @@
 <body>
     <div id="app">
         <header>
+            <!-- v-model all'input che modificherà il testo della variabile temporanea che ho creato -->
+            <!-- al click o premendo il tasto invio chiamo  metodo addtask -->
             <input type="text" v-model='temporaryTask.text' @keyup.enter='addTask' placeholder="Inserisci una nuova Task">
             <button @click='addTask'> Invia</button>
         </header>
        <main>
            <div class="task-container">
                 <ul>
+                    <!-- creato una lista -->
+                    <!-- fatto un for degli oggetti chiamati task nell'array tasks -->
+                    <!-- stampato in pagina i text degli oggetti -->
+                    <!-- (1)messo un v-bind al primo span  -->
+                    <!-- aggiungo classe items e chiedo se task nella posizione i è vero aggiungi classe done -->
+                    <!-- altrimenti non aggiunge nessuna classe -->
+                    <!-- al click chiama funzione check -->
+                    <!-- (2)secondo span al click chiamo  metodo removeTask -->
                     <li v-for='(task,i) in tasks'>
                         <span :class="['items',tasks[i].done ? 'done' : '']" @click='check(i)'>{{tasks[i].text}}</span>
                         <span class="remove" @click="removeTask(i)">X</span>

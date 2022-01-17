@@ -16,6 +16,9 @@ li>span{
     cursor: pointer;
     font-size: 25px;
 }
+li:hover{
+    background-color: lightgrey;
+}
 .done{
     text-decoration: line-through;
     color: lightgreen;
