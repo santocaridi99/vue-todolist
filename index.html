@@ -13,8 +13,9 @@
         <input type="text" v-model='temporaryVariable'>
         <button> Invia</button>
         <ul>
-            <li v-for='(task,i) in tasks' :class="tasks[i].done ? 'done' : '' ">
-                {{tasks[i].text}}
+            <li v-for='(task,i) in tasks'>
+                <span :class="['items',tasks[i].done ? 'done' : '']">{{tasks[i].text}}</span>
+                <span class="remove" @click="removeTask(i)">X</span>
             </li>
         </ul>
     </div>
