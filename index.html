@@ -10,14 +10,20 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model='temporaryTask.text' @keyup.enter='addTask'>
-        <button @click='addTask'> Invia</button>
-        <ul>
-            <li v-for='(task,i) in tasks'>
-                <span :class="['items',tasks[i].done ? 'done' : '']" @click='check(i)'>{{tasks[i].text}}</span>
-                <span class="remove" @click="removeTask(i)">X</span>
-            </li>
-        </ul>
+        <header>
+            <input type="text" v-model='temporaryTask.text' @keyup.enter='addTask' placeholder="Inserisci una nuova Task">
+            <button @click='addTask'> Invia</button>
+        </header>
+       <main>
+           <div class="task-container">
+                <ul>
+                    <li v-for='(task,i) in tasks'>
+                        <span :class="['items',tasks[i].done ? 'done' : '']" @click='check(i)'>{{tasks[i].text}}</span>
+                        <span class="remove" @click="removeTask(i)">X</span>
+                    </li>
+                </ul>
+           </div>
+       </main>
     </div>
 
     <script src="js/script.js"></script>

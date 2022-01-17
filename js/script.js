@@ -18,7 +18,7 @@ new Vue({
         temporaryTask:{
             text:'',
             done:false
-        }
+        },
     },
     methods:{
         removeTask:function(index){
