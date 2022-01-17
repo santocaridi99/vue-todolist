@@ -10,8 +10,8 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model='temporaryVariable'>
-        <button> Invia</button>
+        <input type="text" v-model='temporaryTask.text' @keyup.enter='addTask'>
+        <button @click='addTask'> Invia</button>
         <ul>
             <li v-for='(task,i) in tasks'>
                 <span :class="['items',tasks[i].done ? 'done' : '']">{{tasks[i].text}}</span>
