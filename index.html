@@ -28,7 +28,7 @@
                     <!-- al click chiama funzione check -->
                     <!-- (2)secondo span al click chiamo  metodo removeTask -->
                     <li v-for='(task,i) in tasks'>
-                        <span :class="['items',tasks[i].done ? 'done' : '']" @click='check(i)'>{{tasks[i].text}}</span>
+                        <span :class="['items',tasks[i].done ? 'done' : '']" @click='check(i)'>{{task.text}}</span>
                         <span class="remove" @click="removeTask(i)">X</span>
                     </li>
                 </ul>
